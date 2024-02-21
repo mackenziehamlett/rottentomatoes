@@ -2,12 +2,12 @@
 
 <h1>Movies</h1>
 
-<table id="movies-table">
+<table>
   <thead>
   <tr>
-    <th><%= sortable_column :title, "Title" %></th>
-    <th><%= sortable_column :rating, "rating" %></th>
-    <th><%= sortable_column :release_date, "Release Date" %></th>
+    <th>Title</th>
+    <th>Rating</th>
+    <th>Release Dates</th>
     <th></th>
   </tr>
   </thead>
@@ -24,24 +24,4 @@
 </table>
 
 <%= link_to "New movie", new_movie_path %>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const table = document.getElementById("movies-table");
-        const headers = table.querySelectorAll("th");
-
-        headers.forEach(header => {
-            header.addEventListener("click", () => {
-                const column = header.innerText.trim().toLowerCase().replace(" ", "_");
-                const sortOrder = header.classList.contains("current asc") ? 'desc' : 'asc';
-
-                const urlParams = new URLSearchParams(window.location.search);
-                urlParams.set('sort_column', column);
-                urlParams.set('sort_direction', sortOrder);
-
-                window.location.href = `${window.location.pathname}?${urlParams.toString()}`;
-            });
-        });
-    });
-</script>
 

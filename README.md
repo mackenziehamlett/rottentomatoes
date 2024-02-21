@@ -1,14 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mackenzie Hamlett - CSCE 606
+
+### Deployment Link (Heroku)
+ #### https://dumbapp-3c658fbb3620.herokuapp.com/
+
+### Ruby version 
+ #### 3.1.0
 
 
-* Ruby version
-- 3.1.0
 
-* Deployment Link (Heroku)
- https://dumbapp-3c658fbb3620.herokuapp.com/
-
-* ...
-# rottentomatoes

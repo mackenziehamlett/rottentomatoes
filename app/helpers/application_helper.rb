@@ -12,9 +12,9 @@ module ApplicationHelper
     title ||= column.titleize
     if params[:key] == column || session[:key] == column
       title += if order == 'asc'
-                 '^'
+                 '↑'
                else
-                 '\/'
+                 '↓'
                end
     end
 

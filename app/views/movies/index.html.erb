@@ -5,10 +5,9 @@
 <table>
   <thead>
   <tr>
-    <th>Title</th>
-    <th>Rating</th>
-    <th>Release Dates</th>
-    <th></th>
+    <th class="<%= column_class("title") %>"><%= sortable("title") %></th>
+    <th class="<%= column_class("rating") %>"><%= sortable("rating") %></th>
+    <th class="<%= column_class("release_date") %>"><%= sortable("release_date", "Release Date", ) %></th>
   </tr>
   </thead>
   <tbody>

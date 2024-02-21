@@ -2,15 +2,26 @@
 
 <h1>Movies</h1>
 
-<table id="movies">
+<table>
   <thead>
-      <% @movies.each do |movie| %>
-        <%= render movie %>
-        <p>
-          <%= link_to "Show this movie", movie %>
-        </p>
-      <% end %>
+  <tr>
+    <th>Title</th>
+    <th>Director</th>
+    <th>Release Year</th>
+    <th></th>
+  </tr>
   </thead>
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.director %></td>
+      <td><%= movie.release_year %></td>
+      <td><%= link_to "Show", movie %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>
 
 <%= link_to "New movie", new_movie_path %>
+

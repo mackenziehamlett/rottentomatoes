@@ -4,15 +4,13 @@
 
 <table id="movies">
   <thead>
-  <% @movies.each do |movie| %>
-    <tr>
-      <td><%= movie.title %></td>
-      <td><%= movie.director %></td>
-      <td><%= movie.release_date %></td>
-      <td><%= link_to "Show", movie %></td>
-    </tr>
+      <% @movies.each do |movie| %>
+        <%= render movie %>
+        <p>
+          <%= link_to "Show this movie", movie %>
+        </p>
+      <% end %>
   </thead>
-  <% end %>
 </table>
 
 <%= link_to "New movie", new_movie_path %>

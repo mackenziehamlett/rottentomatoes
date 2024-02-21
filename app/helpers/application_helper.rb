@@ -2,7 +2,7 @@ module ApplicationHelper
   def sortable(column, title = nil)
     order = 'ascending'
     if (params[:key] == column || session[:key] == column) && params[:order].presence
-      order = params[:order] == 'descending' ? 'ascending' : 'descending'
+      order = params[:order] == 'desc' ? 'ascending' : 'descending'
     elsif (params[:key] == column || session[:key] == column) && session[:order].presence
       order = session[:order]
       if column == session[:key]

@@ -1,5 +1,11 @@
 # Seed the RottenPotatoes DB with some movies.
 more_movies = [
+  {:title => 'The Princess Bride', :rating => 'R',
+   :release_date => '01-Sept-1975'},
+  {:title => 'Finding Nemo', :rating => 'G',
+   :release_date => '04-Jan-2003'},
+  {:title => 'Shrek', :rating => 'G',
+   :release_date => '31-Jan-2001'},
   {:title => 'My Neighbor Totoro', :rating => 'G',
    :release_date => '16-Apr-1988'},
   {:title => 'Green Book', :rating => 'PG-13',

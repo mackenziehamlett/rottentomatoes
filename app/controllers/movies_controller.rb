@@ -8,8 +8,8 @@ class MoviesController < ApplicationController
         @movies = Movie.order("#{session[:key]} #{session[:order]}")
         return
       else
-        session[:key] = 'title'
-        session[:order] = 'asc'
+        session[:key] = 'release_date'
+        session[:order] = 'ascending'
       end
     else
       session[:order] = params[:order]
